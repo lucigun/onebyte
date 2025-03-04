@@ -2,7 +2,7 @@ const Button = ({children, text,color="black"}) => {
 	// console.log(props);
 	// 이벤트 핸들러 생성
 	const onClickButton = (e) =>{
-		console.log(e);
+		console.log(e); //synthetic base event 객체, 모든 브라우저에서의 이벤트 객체를 통일함
 		console.log(text);
 	};
 
