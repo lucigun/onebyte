@@ -1,27 +1,35 @@
 import "./App.css";
-import Header from "./commponents/Header.jsx";
-import Footer from "./commponents/Footer.jsx";
-import Main from "./commponents/Main.jsx";
-import Button from "./commponents/Button.jsx";
+import { useState } from "react";
+
+
 
 function App() {
-	const buttonProps = {
-		text: "메일",
-		color: "red",
-		a : 1 ,
-		b : 2 ,
-		c : 3 , 
-};
-
+	const [count, , setCount] = useState(0);
+	const [light, setLight] = useState("OFF");
+	// console.log(state);
 	return (
 		<>
-			<Button {...buttonProps}/>
-			<Button text={"카페"} />
-			<Button text={"블로그"} > 
-				<Header/>
-			</Button>
+		<div>
+			<h1>{light}</h1>
+			<button onClick={()=>{
+			setLight(light === "ON"?"OFF":"ON");
+			}}
+		>
+			{light === "ON"?"OFF":"ON"};
+			</button>
+		</div>
+		<div>
+		<h1>{count}</h1>			
+		<button onClick={() => {
+			setCount(count + 1);
+		}}
+		>
+			+
+		</button>
+		</div>
 		</>
 	);
 }
+
 
 export default App;
