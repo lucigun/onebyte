@@ -1,6 +1,15 @@
 const Button = ({children, text,color="black"}) => {
 	// console.log(props);
-	return <button style={{ color: color }}>
+	// 이벤트 핸들러 생성
+	const onClickButton = (e) =>{
+		console.log(e);
+		console.log(text);
+	};
+
+	return <button 
+	onClick={onClickButton} // 마우스 클릭
+	// onMouseEnter={onClickButton} // 마우스 호버
+	style={{ color: color }}>
 		{text}-{color.toUpperCase()}{children}
 		</button>;
 };
