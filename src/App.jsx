@@ -1,11 +1,11 @@
 import "./App.css";
-import { useState } from "react";
 import Register from "./commponents/Register";
+import HookExam from "./commponents/HookEaxm";
 
 function App() {
   return (
     <>
-      <Register />
+      <HookExam />
     </>
   );
 }
